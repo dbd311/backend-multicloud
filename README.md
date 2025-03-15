@@ -75,7 +75,7 @@ Before you begin, ensure you have the following installed:
 
 ## Deploying to Kubernetes
 
-    The Kubernetes manifests provided in this repository can be used to deploy the backend application to a Kubernetes cluster.
+The Kubernetes manifests provided in this repository can be used to deploy the backend application to a Kubernetes cluster.
 
 1. Apply the Kubernetes manifests:
 
