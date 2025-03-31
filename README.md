@@ -80,7 +80,9 @@ The Kubernetes manifests provided in this repository can be used to deploy the b
 1. Apply the Kubernetes manifests:
 
     kubectl apply -f backend-configMap.yaml
+
     kubectl apply -f backend-deployment.yaml
+    
     kubectl apply -f backend-service.yaml 
 
 2. Verify the deployment:
