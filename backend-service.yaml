@@ -4,7 +4,7 @@ metadata:
   name: backend-service
   namespace: multi-cloud
 spec:
-  type: ClusterIP  # Explicitly set the type as clusterIP, default type of a Kubernetes service
+  # type: ClusterIP  # set the type as clusterIP, default type of a Kubernetes service
   selector:
     app: nginx-backend
   ports:

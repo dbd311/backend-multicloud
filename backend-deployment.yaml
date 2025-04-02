@@ -16,6 +16,7 @@ spec:
       containers:
         - name: backend
           #image: gcr.io/multi-cloud-platform/nginx-backend:v1.0.0
+          # IMAGE_NAME and IMAGE_TAG are defined in configMap
           image: "$(IMAGE_NAME):$(IMAGE_TAG)"
           ports:
             - containerPort: 5000

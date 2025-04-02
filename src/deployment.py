@@ -2,6 +2,7 @@ from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from kubernetes import client, config
 from dns_manager import create_dns_record, delete_dns_record
+from url_manager import validate_domain, generate_app_name, generate_public_url
 
 deployment_bp = Blueprint('deployment', __name__)
 
@@ -17,7 +18,7 @@ def deploy():
     # Validate inputs
     cloud_provider = request.json.get('cloud_provider', 'aws')  # Default to AWS
     domain = request.json.get('domain', 'example.com')
-    namespace = request.json.get('namespace', 'default') # If no namespace is specified, default namespace is used
+    namespace = request.json.get('namespace', 'multi-cloud') # If no namespace is specified, default namespace multi-cloud is used
     app_name = request.json.get('appname', 'default-app') # If no app is specified, default-app is used
     
     if not validate_domain(domain):
